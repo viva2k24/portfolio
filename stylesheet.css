@@ -37,7 +37,7 @@ html {
 
 .logo {
     position: relative;
-    font-size: 25px;
+    font-size: 24px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -48,6 +48,11 @@ html {
 
 .logo:hover{
     cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -65,6 +70,23 @@ html {
 
 .navbar a:hover {
     color: #0ef;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Keep links in a single line */
+        overflow-x: auto; /* Allow horizontal scrolling if necessary */
+        padding: 10px 0; /* Add some padding for better touch targets */
+    }
+
+    .navbar a {
+        margin: 0 10px; /* Adjust margin for smaller screens */
+        font-size: 18px; /* Adjust font size for better visibility */
+    }
+
+    .header {
+        padding: 15px 5%; /* Reduce padding for mobile */
+    }
 }
 
 
