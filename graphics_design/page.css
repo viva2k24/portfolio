@@ -1,0 +1,154 @@
+/* Basic styling for body and background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0e0d2f;
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.sub-title span {
+    color: #00eeff;
+}
+
+/* Project card styling */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two projects per row */
+    gap: 80px 40px; /* Add vertical space (40px) and horizontal space (20px) */
+    justify-items: center;
+}
+
+.project-card {
+    background: #1f1f3a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: background 0.5s, transform 0.5s;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px #0ef,
+                1px 1px 40px #fff;
+}
+
+.project-card h2 {
+    font-size: 18px;
+    color: #00eeff;
+    margin-bottom: 15px;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Assign specific width and height to each project card */
+#project1 {
+    width: 400px;
+    height: 600px;
+}
+
+#project2 {
+    width: 400px;
+    height: 600px;
+}
+
+#project3 {
+    width: 400px;
+    height: 600px;;
+}
+
+#project4 {
+    width: 400px;
+    height: 600px;
+}
+
+#project5 {
+    width: 400px;
+    height: 530px;
+}
+
+#project6 {
+    width: 400px;
+    height: 300px;
+}
+
+#project7 {
+    width: 400px;
+    height: 300px;
+}
+
+#project8 {
+    width: 400px;
+    height: 400px;
+}
+
+#project9 {
+    width: 400px;
+    height: 250px;
+}
+
+#project10 {
+    width: 400px;
+    height: 530px;
+}
+
+#project11 {
+    width: 400px;
+    height: 550px;
+}
+
+#project12 {
+    width: 400px;
+    height: 560px;
+}
+
+#project13 {
+    width: 400px;
+    height: 550px;
+}
+
+#project14 {
+    width: 400px;
+    height: 550px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-list {
+        grid-template-columns: repeat(1, 1fr); /* Single project per row on smaller screens */
+    }
+
+    .project-card {
+        width: 100%; /* Set width to 100% for smaller screens */
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}
+

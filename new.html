@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="main.js"></script>
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #0e0d2f ;
+}
+/* HEADER--SECTION */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    color: #fff;
+}
+
+/* Smooth scroll for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Underline active nav link */
+.navbar a.active {
+    border-bottom: 2px solid #0ef; /* Underline in the #0ef color */
+}
+
+
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+
+        /* HOME--SECTION */
+
+
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #0e0d2f;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+}
+
+.home-content {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    flex: 1; /* Allow it to take the available space */
+}
+
+.text-content {
+    max-width: 1000px;
+    flex: 1; /* Allow text content to take up more space */
+}
+
+.text-content{
+    margin-bottom: -30px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content .text-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop  1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span{
+    color: #0ef;
+}
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.home-sci a:hover {
+    color: #0ef;
+}
+
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    color: #0ef;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    font-size: 20px;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover{
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan , 0 0 200px cyan;
+}
+
+.image-content {
+    margin-left: auto; /* Push the image to the rightmost side */
+    margin-top: 20px; /* Add some top margin if needed */
+    margin-bottom: 30px;
+}
+
+.image-content img {
+    width: 350px;  /* Increased width */
+    height: 400px; /* Increased height */
+    border-radius: 50%; /* Optional: if you want a round image */
+    /* Glow effect with mixed purple and sky blue colors */
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.7), 0 0 40px rgba(0, 191, 255, 0.7); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.image-content img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 30px rgba(13, 196, 228, 0.9), 0 0 60px rgba(0, 191, 255, 0.9); /* Stronger glow on hover */
+}
+
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-content {
+        margin-top: 20px;
+        margin-left: 0; /* Remove the left margin on smaller screens */
+    }
+
+    .image-content img {
+        width: 700px;
+    }
+}
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Siva Shankari K</h1>
+                <h3>And I'm a <span class="text"></span></h3>
+                <p>I strive to create engaging user experiences that resonate with audiences <br> My journey in the design world is fueled by a love for aesthetics and a desire to bring ideas to life through visuals.</p>
+                <div class="home-sci">
+                    <a href="social_media/email.html" style="--i:7"><i class='bx bx-envelope'></i></a>
+                    <a href="social_media/whatsapp.html" style="--i:8"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="social_media/linkedin.html" style="--i:9"><i class='bx bxl-linkedin'></i></a>
+                    <a href="social_media/instagram.html" style="--i:10"><i class='bx bxl-instagram'></i></a>
+                    <a href="social_media/instagram.html" style="--i:10"> <i class="fab fa-behance" style="color: #0ef;"></i></a>
+                   
+                </div>
+                <a href="#" class="btn-box">Download CV</a>
+            </div>
+            <div class="image-content">
+                <img src="img/profile.jpg" alt="Profile Picture of Siva Shankari K">
+            </div>
+        </div>
+    <span class="home-imgHover"></span>
+    </section>
+
+</body>
+</html>
