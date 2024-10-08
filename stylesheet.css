@@ -80,6 +80,8 @@ html {
     display: flex;
     align-items: center;
     padding: 70px 10%;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
 }
 
 .home-content {
@@ -87,11 +89,15 @@ html {
     justify-content: flex-start; /* Align items to the left */
     align-items: center;
     flex: 1; /* Allow it to take the available space */
+    flex-direction: column; /* Stack text and image */
+    align-items: center; /* Center items */
+    padding: 20px; /* Add padding for spacing */
 }
 
 .text-content {
-    max-width: 1000px;
-    flex: 1; /* Allow text content to take up more space */
+    max-width: 100%; /* Allow full width on smaller screens */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add margin to separate from image */
 }
 
 .text-content{
@@ -189,6 +195,7 @@ html {
     animation-delay: 2s;
     box-shadow: 0 0 5px #0ef,
     0 0 25px #0ef;
+    margin-bottom: 70PX;
 }
 
 .btn-box:hover{
@@ -199,13 +206,15 @@ html {
 
 .image-content {
     margin-left: auto; /* Push the image to the rightmost side */
-    margin-top: 20px; /* Add some top margin if needed */
+    margin-top: 200px; /* Add some top margin if needed */
     margin-bottom: 30px;
+    margin: 20px 0; /* Add margin to separate from text */
 }
 
 .image-content img {
-    width: 400px;  /* Increased width */
-    height: 400px; /* Increased height */
+    width: 100%; /* Make image responsive */
+    max-width: 400px; /* Set a max width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Optional: if you want a round image */
     /* Glow effect with mixed purple and sky blue colors */
     box-shadow: 0 0 20px rgba(128, 0, 128, 0.7), 0 0 40px rgba(0, 191, 255, 0.7); 
@@ -225,7 +234,7 @@ html {
     }
 
     .image-content {
-        margin-top: 20px;
+        margin-top: 50px;
         margin-left: 0; /* Remove the left margin on smaller screens */
     }
 
@@ -244,7 +253,14 @@ html {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 0.1rem;
-    margin-bottom: 50px;
+    margin-top: 400px;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+.about-img{
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 .about-img img {
@@ -263,7 +279,8 @@ html {
 }
 
 .about-text {
-    margin-left: -70px; /* Move text to the left by adjusting the margin */
+    text-align: center; /* Center text */
+    margin: 0; /* Reset margin */
 }
 
 .about-text h2{
@@ -287,6 +304,19 @@ html {
     font-size: 24px;
     line-height: 1.4;
     margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+    .about {
+        flex-direction: column; /* Stack items vertically */
+    }
+    .about{
+        margin-top: 500px;
+    }
 }
 
     /* PROJECTS -- SECTION */
