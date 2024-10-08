@@ -30,10 +30,8 @@ html {
 
 /* Underline active nav link */
 .navbar a.active {
-    border-bottom: 2px solid #0ef; /* Underline in the #0ef color */
+    border-bottom: 2px solid #0ef;
 }
-
-
 
 .logo {
     position: relative;
@@ -46,11 +44,11 @@ html {
     animation: slideRight 1s ease forwards;
 }
 
-.logo:hover{
+.logo:hover {
     cursor: pointer;
 }
 
-.navbar{
+.navbar {
     display: flex;
     flex-wrap: wrap;
 }
@@ -72,22 +70,45 @@ html {
     color: #0ef;
 }
 
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: row; /* Keep links in a single line */
-        overflow-x: auto; /* Allow horizontal scrolling if necessary */
-        padding: 10px 0; /* Add some padding for better touch targets */
+        flex-direction: column; /* Vertical links on mobile */
+        position: absolute;
+        top: 60px;
+        left: -100%; /* Hide offscreen initially */
+        width: 100%;
+        background: #051129;
+        transition: 0.3s;
+    }
+
+    .navbar.active {
+        left: 0; /* Show when active */
     }
 
     .navbar a {
-        margin: 0 10px; /* Adjust margin for smaller screens */
-        font-size: 18px; /* Adjust font size for better visibility */
+        margin: 15px 0; /* Vertical space between links */
+        font-size: 18px;
+        text-align: center; /* Center the links */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger on mobile */
     }
 
     .header {
         padding: 15px 5%; /* Reduce padding for mobile */
     }
 }
+
 
 
         /* HOME--SECTION */
