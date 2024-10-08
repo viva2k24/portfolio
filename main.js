@@ -70,3 +70,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         }
     });
 });
+function toggleMenu() {
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}
